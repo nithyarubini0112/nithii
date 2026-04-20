@@ -1,0 +1,5 @@
+
+1. Jenkins → New Item → Pipeline
+2. Pipeline section → Pipeline script from SCM → Git → enter repo URL
+3. Manage Jenkins → Credentials → Add Docker Hub credentials with ID dockerhub-creds
+4. Click Build Now
