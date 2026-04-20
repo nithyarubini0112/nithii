@@ -1,3 +1,17 @@
 kubectl create deployment myapp --image=nginx:latest
 kubectl get deployments
 kubectl get pods
+# Scale up to 3 replicas
+kubectl scale deployment myapp --replicas=3
+kubectl get pods
+
+# Scale back down
+kubectl scale deployment myapp --replicas=1
+kubectl expose deployment myapp --port=80 --type=NodePort
+kubectl get services
+kubectl describe pod <pod-name>
+kubectl logs <pod-name>
+
+# Clean up
+kubectl delete deployment myapp
+kubectl delete service myapp
